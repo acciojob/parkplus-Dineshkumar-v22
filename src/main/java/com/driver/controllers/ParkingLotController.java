@@ -7,7 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 import com.driver.model.*;
+
 
 @RestController
 @RequestMapping("/parking-lots")
@@ -33,6 +35,7 @@ public class ParkingLotController {
         return new ResponseEntity<>(newSpot, HttpStatus.CREATED);
     }
 
+
     @DeleteMapping("/spot/{spotId}/delete")
     public ResponseEntity<Void> deleteSpot(@PathVariable int spotId) {
         //delete a spot from given parking lot
@@ -40,12 +43,14 @@ public class ParkingLotController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+
     @PutMapping("/{parkingLotId}/spot/{spotId}/update")
     public ResponseEntity<Spot> updateSpot(@PathVariable int parkingLotId, @PathVariable int spotId, @RequestParam int pricePerHour) {
         //update the details of a spot
         Spot updatedSpot=parkingLotService.updateSpot(parkingLotId,spotId,pricePerHour);
         return new ResponseEntity<>(updatedSpot, HttpStatus.OK);
     }
+
 
     @DeleteMapping("/{parkingLotId}/delete")
     public ResponseEntity<Void> deleteParkingLot(@PathVariable int parkingLotId) {
