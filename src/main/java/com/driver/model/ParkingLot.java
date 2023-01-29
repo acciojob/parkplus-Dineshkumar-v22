@@ -16,6 +16,7 @@ public class ParkingLot {
     private String address;
 
 
+
     public ParkingLot(String name, String address) {
         this.name = name;
         this.address = address;

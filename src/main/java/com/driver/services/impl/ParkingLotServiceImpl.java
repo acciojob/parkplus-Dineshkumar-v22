@@ -1,5 +1,6 @@
 package com.driver.services.impl;
 
+
 import com.driver.model.ParkingLot;
 import com.driver.model.Spot;
 import com.driver.model.SpotType;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Service
 public class ParkingLotServiceImpl implements ParkingLotService {

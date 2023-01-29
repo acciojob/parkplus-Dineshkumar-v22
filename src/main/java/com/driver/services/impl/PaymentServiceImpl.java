@@ -1,5 +1,6 @@
 package com.driver.services.impl;
 
+
 import com.driver.model.Payment;
 import com.driver.model.PaymentMode;
 import com.driver.model.Reservation;
@@ -9,6 +10,7 @@ import com.driver.repository.ReservationRepository;
 import com.driver.services.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class PaymentServiceImpl implements PaymentService {
@@ -25,6 +27,7 @@ public class PaymentServiceImpl implements PaymentService {
         //Note that the reservationId always exists
         Reservation reservation = reservationRepository2.findById(reservationId).get();
         Spot spot=reservation.getSpot();
+
 
 
         int bill=reservation.getNumberOfHours()*spot.getPricePerHour();

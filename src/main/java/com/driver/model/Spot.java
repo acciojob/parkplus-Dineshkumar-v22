@@ -14,6 +14,7 @@ public class Spot {
     @Enumerated(EnumType.STRING)
     private SpotType spotType;
 
+
     private int pricePerHour;
 
     @Column(columnDefinition = "TINYINT(1)")
@@ -54,6 +55,7 @@ public class Spot {
         this.spotType = spotType;
     }
 
+
     public int getPricePerHour() {
         return pricePerHour;
     }
@@ -66,6 +68,7 @@ public class Spot {
         return occupied;
     }
 
+
     public void setOccupied(Boolean occupied) {
         this.occupied = occupied;
     }
@@ -77,6 +80,7 @@ public class Spot {
     public void setParkingLot(ParkingLot parkingLot) {
         this.parkingLot = parkingLot;
     }
+
 
     public List<Reservation> getReservationList() {
         return reservationList;

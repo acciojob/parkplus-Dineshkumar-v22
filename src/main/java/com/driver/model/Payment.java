@@ -6,9 +6,11 @@ import javax.persistence.*;
 @Entity
 public class Payment {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
 
     @Column(columnDefinition = "TINYINT(1)")
     private Boolean paymentCompleted;

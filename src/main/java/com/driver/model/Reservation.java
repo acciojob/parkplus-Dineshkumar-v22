@@ -30,6 +30,7 @@ public class Reservation {
         this.numberOfHours = numberOfHours;
     }
 
+
     public Reservation() {
     }
 
@@ -53,6 +54,7 @@ public class Reservation {
         return user;
     }
 
+
     public void setUser(User user) {
         this.user = user;
     }
@@ -64,6 +66,7 @@ public class Reservation {
     public void setSpot(Spot spot) {
         this.spot = spot;
     }
+
 
     public Payment getPayment() {
         return payment;
